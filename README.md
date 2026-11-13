@@ -7,7 +7,8 @@ Welcome to my Machine Learning repository. This repository documents hands-on ex
 | # | Project Name | Tech Stack | Description | Notebook |
 |---|---|---|---|---|
 | 01 | Pet Store Recommendation System | Python, Scikit-learn, Pandas, NumPy | An item-based collaborative recommendation engine using K-Nearest Neighbors (KNN) and Euclidean distance to recommend missing pet products to customers. | [View Project](01-customer-recommendation-system.ipynb) |
-| 02 | Movie Recommendation System | Python, Scikit-learn, Pandas, NumPy | A user-based collaborative filtering recommender using K-Nearest Neighbors (KNN) and Euclidean distance to recommend unviewed movie genres. | [View Project](02-movies-simple-recommendation-system.ipynb) |
+| 02 | User-Genre Movie Recommender | Python, Scikit-learn, Pandas, NumPy | A user-based collaborative filtering recommender using K-Nearest Neighbors (KNN) and Euclidean distance to recommend unviewed movie genres. | [View Project](02-movies-simple-recommendation-system.ipynb) |
+| 03 | IMDB Content-Based Movie Recommender | Python, Scikit-learn, Pandas, NumPy | A content-based movie recommendation system using text vectorization (CountVectorizer) and Cosine Similarity over metadata features (cast, director, genres). | [View Project](03-imdb-content-based-recommender.ipynb) |
 
 ---
 
@@ -30,7 +31,7 @@ Analyze customer order histories in a pet store, find the most behaviorally simi
 
 ---
 
-## Project 02: Movie Recommendation System Overview
+## Project 02: User-Genre Movie Recommender Overview
 
 ### Objective
 Recommend unviewed movie genres to a new user (`user_id = 7`) by quantifying behavioral similarity across user genre interaction histories using K-Nearest Neighbors and Euclidean distance.
