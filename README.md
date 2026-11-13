@@ -8,7 +8,7 @@ Welcome to my Machine Learning repository. This repository documents hands-on ex
 |---|---|---|---|---|
 | 01 | Pet Store Recommendation System | Python, Scikit-learn, Pandas, NumPy | An item-based collaborative recommendation engine using K-Nearest Neighbors (KNN) and Euclidean distance to recommend missing pet products to customers. | [View Project](01-customer-recommendation-system.ipynb) |
 | 02 | User-Genre Movie Recommender | Python, Scikit-learn, Pandas, NumPy | A user-based collaborative filtering recommender using K-Nearest Neighbors (KNN) and Euclidean distance to recommend unviewed movie genres. | [View Project](02-movies-simple-recommendation-system.ipynb) |
-| 03 | IMDB Content-Based Movie Recommender | Python, Scikit-learn, Pandas, NumPy | A content-based movie recommendation system using text vectorization (CountVectorizer) and Cosine Similarity over metadata features (cast, director, genres). | [View Project](03-imdb-content-based-recommender.ipynb) |
+| 03 | IMDB Content-Based Movie Recommender | Python, Scikit-learn, Pandas, NumPy | A content-based movie recommendation system using text vectorization (CountVectorizer) and Cosine Similarity over metadata features (cast, director, genres). | [View Project](03-movie-recommendarion-system.ipynb) |
 
 ---
 
@@ -49,5 +49,30 @@ Nearest Neighbor   : User ID 6 (Index 5)
 Target User Genres : ['mystery', 'thriller', 'adventure']
 Nearest User Genres: ['mystery', 'sci-fi', 'thriller']
 --------------------------------------------------
+```
+گگگگ
+## Project 03: IMDB Content-Based Movie Recommender Overview
+
+### Objective
+Develop a content-based recommendation engine on the IMDB Top 1000 dataset to suggest the top 5 most similar movies given an input movie title, evaluated via text token similarity across directors, main cast members, and movie genres.
+
+### Workflow and Architecture
+1. **Feature Selection & Missing Value Handling**: Filtered the essential feature subset (`Series_Title`, `Genre`, `Director`, `Star1`, `Star2`, and `Star3`) and handled potential missing records across metadata columns using `.fillna('')`.
+2. **Text Preprocessing & Normalization**: Normalized multi-word entity names (directors and actors) by replacing spaces with underscores (`_`) to ensure full names are treated as distinct, single tokens during tokenization (e.g., `Christopher Nolan` $\rightarrow$ `Christopher_Nolan`). Cleaned commas and whitespace from the `Genre` strings.
+3. **Feature Combination (`Movie_vector`)**: Combined all processed metadata attributes into a single comprehensive text representation per movie row using string aggregation (`.agg(' '.join, axis=1)`).
+4. **Vectorization (`CountVectorizer`)**: Built a token count matrix ($1000 \times M$) converting combined text metadata into bag-of-words sparse vectors.
+5. **Similarity Modeling (Cosine Similarity)**: Computed pairwise angular distances across all 1,000 films to produce a $1000 \times 1000$ symmetric similarity matrix.
+6. **Recommendation Logic**: Queried movie index by title, extracted corresponding pairwise similarity scores, sorted in descending order, excluded the queried movie itself, and retrieved the top 5 nearest movie titles with their respective similarity metrics.
+
+### Skills and Technologies
+- **Languages**: Python 3
+- **Data Manipulation**: Pandas, NumPy
+- **Natural Language Processing / Vectorization**: Scikit-Learn (`CountVectorizer`)
+- **Metric Computation**: Scikit-Learn (`cosine_similarity`)
+- **Tools**: Jupyter Notebook, Git, GitHub
+
+### Output and Example Results
+Given an input movie title, the system successfully filters, vectorizes, and computes similarity scores to output the top 5 most contextually relevant movie recommendations based on shared cast, directors, and genres.
+
 Recommendation Output: ['sci-fi']
 --------------------------------------------------
