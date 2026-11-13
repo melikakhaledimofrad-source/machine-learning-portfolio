@@ -8,7 +8,7 @@ Welcome to my Machine Learning repository. This repository documents hands-on ex
 |---|---|---|---|---|
 | 01 | Pet Store Recommendation System | Python, Scikit-learn, Pandas, NumPy | An item-based collaborative recommendation engine using K-Nearest Neighbors (KNN) and Euclidean distance to recommend missing pet products to customers. | [View Project](01-customer-recommendation-system.ipynb) |
 | 02 | User-Genre Movie Recommender | Python, Scikit-learn, Pandas, NumPy | A user-based collaborative filtering recommender using K-Nearest Neighbors (KNN) and Euclidean distance to recommend unviewed movie genres. | [View Project](02-movies-simple-recommendation-system.ipynb) |
-| 03 | IMDB Content-Based Movie Recommender | Python, Scikit-learn, Pandas, NumPy | A content-based movie recommendation system using text vectorization (CountVectorizer) and Cosine Similarity over metadata features (cast, director, genres). | [View Project](03-movie-recommendarion-system.ipynb) |
+| 03 | IMDB Content-Based Movie Recommender | Python, Scikit-learn, Pandas, NumPy | A content-based movie recommendation system using text vectorization (CountVectorizer) and Cosine Similarity over metadata features (cast, director, genres). | [View Project](03-movie-recommendation-system.ipynb) |
 
 ---
 
