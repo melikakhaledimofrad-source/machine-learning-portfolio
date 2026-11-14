@@ -48,6 +48,7 @@ Neighbors Distance : [1.73205081, 2.23606798, 2.64575131, 2.64575131, 3.0]
 Nearest Neighbor   : User ID 6 (Index 5)
 Target User Genres : ['mystery', 'thriller', 'adventure']
 Nearest User Genres: ['mystery', 'sci-fi', 'thriller']
+Recommendation Output: ['sci-fi']
 --------------------------------------------------
 ```
 ---
@@ -74,5 +75,4 @@ Develop a content-based recommendation engine on the IMDB Top 1000 dataset to su
 ### Output and Example Results
 Given an input movie title, the system successfully filters, vectorizes, and computes similarity scores to output the top 5 most contextually relevant movie recommendations based on shared cast, directors, and genres.
 
-Recommendation Output: ['sci-fi']
 --------------------------------------------------
