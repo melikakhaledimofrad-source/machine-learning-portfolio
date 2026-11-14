@@ -50,7 +50,7 @@ Target User Genres : ['mystery', 'thriller', 'adventure']
 Nearest User Genres: ['mystery', 'sci-fi', 'thriller']
 --------------------------------------------------
 ```
-گگگگ
+---
 ## Project 03: IMDB Content-Based Movie Recommender Overview
 
 ### Objective
